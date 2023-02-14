@@ -1,0 +1,92 @@
+.itm-swiper-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0px;
+
+    overflow: hidden;
+    cursor: pointer;
+
+    .itm-swiper {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        user-select: none;
+
+        transition: all 0.5s ease;
+
+        .itm-swiper-wrapper {
+            transition-duration: 0.3s;
+            transition-property: transform;
+
+            .itm-swiper-slide {
+                flex-shrink: 0;
+                width: 100%;
+                height: 100px;
+                position: relative;
+            }
+        }
+    }
+
+    .itm-swiper-button-prev {
+        display: block;
+        margin: 0px;
+
+        width: 80px;
+        min-width: 80px;
+        height: 80px;
+
+        background: url("../images/button-prev.webp"), white;
+        background-size: 100%;
+        background-position: 0px 50%;
+        background-repeat: no-repeat;
+
+        transition: transform 0.5s ease;
+
+        &.itm-swiper-hidden,
+        &.itm-swiper-disabled {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            height: 100%;
+
+            transform: translateX(-150px);
+            z-index: 1;
+        }
+
+        &.itm-swiper-hidden {
+            transition: all 0s ease;
+        }
+    }
+
+    .itm-swiper-button-next {
+        display: block;
+        margin: 0px;
+
+        width: 80px;
+        min-width: 80px;
+        height: 80px;
+
+        background: url("../images/button-next.webp"), white;
+        background-size: 100%;
+        background-position: 0px 50%;
+        background-repeat: no-repeat;
+
+        transition: transform 0.5s ease;
+
+        &.itm-swiper-hidden,
+        &.itm-swiper-disabled {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            height: 100%;
+
+            transform: translateX(100px);
+            z-index: 1;
+        }
+
+        &.itm-swiper-hidden {
+            transition: all 0s ease;
+        }
+    }
+}
